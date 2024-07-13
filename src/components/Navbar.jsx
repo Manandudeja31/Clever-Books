@@ -32,7 +32,7 @@ const Navbar = () => {
           className=" object-contain hover:cursor-pointer mr-16 md:mr-0"
         />
         {/* Pc Navbar */}
-        <div className=" hidden md:block">
+        <div className=" hidden lg:block">
           <ul className="flex gap-10 font-medium ">
             <li className="hover:cursor-pointer hover:text-orange-500">
               Product
@@ -82,7 +82,7 @@ const Navbar = () => {
             <li className="hover:cursor-pointer hover:text-orange-500">Blog</li>
           </ul>
         </div>
-        <div className="hidden md:block">
+        <div className="hidden lg:block">
           <button
             className="text-transparent bg-clip-text 
           bg-gradient-to-r from-[#fc907e] to-[#9f6eed] font-medium p-2 hover:text-white pr-8"
@@ -97,7 +97,7 @@ const Navbar = () => {
           </button>
         </div>
         {/* Mobile Screen */}
-        <div className=" flex items-center pr-5 justify-between bg-transparent md:hidden">
+        <div className=" flex items-center pr-5 justify-between bg-transparent lg:hidden">
           {menu && (
             <div className="">
               <ul

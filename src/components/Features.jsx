@@ -4,7 +4,6 @@ import tab1 from "../Assets/tab1.svg";
 import tab2 from "../Assets/tab2.png";
 import tab3 from "../Assets/tab3.svg";
 import tab4 from "../Assets/tab4.svg";
-import arrowbtn from "../Assets/arrowbtn.svg";
 
 const tabsData = [
   {
@@ -40,16 +39,14 @@ const Features = () => {
     setActiveTab((prevTab) => (prevTab + 1) % tabsData.length);
   };
 
-  const prevTab = () => {
-    setActiveTab(
-      (prevTab) => (prevTab - 1 + tabsData.length) % tabsData.length
-    );
-  };
-
-  useEffect(() => {
+  async function fetchData() {
     setTimeout(() => {
       nextTab();
     }, [5000]);
+  }
+
+  useEffect(() => {
+    fetchData();
   });
 
   return (
@@ -58,9 +55,6 @@ const Features = () => {
         Get Crest and get...
       </h1>
       <div className="relative w-full flex justify-center items-center mx-auto mt-10 pb-40">
-        <button onClick={prevTab} className="px-4 py-2 text-white rounded">
-          <img src={arrowbtn} alt="left" className="rotate-180 size-20" />
-        </button>
         <div className="overflow-hidden relative bg-white rounded-3xl w-4/5">
           <div
             className="flex transition-transform duration-500"
@@ -84,9 +78,6 @@ const Features = () => {
             ))}
           </div>
         </div>
-        <button onClick={nextTab} className="px-4 py-2 text-white rounded">
-          <img src={arrowbtn} alt="right" className="size-20" />
-        </button>
       </div>
     </div>
   );

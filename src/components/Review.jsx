@@ -45,7 +45,7 @@ const Review = ({ reviews }) => {
             </button>
           </div>
         </div>
-        <div className="flex flex-col md:flex-row gap-5 pt-20 justify-center items-center">
+        <div className="flex flex-col gap-5 pt-20 justify-center items-center">
           <div className="flex gap-5">
             <div
               className=" flex flex-col rounded-2xl

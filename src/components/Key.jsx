@@ -32,7 +32,7 @@ const Key = () => {
   return (
     <div className="container mx-auto p-10 mt-20 mb-20 ">
       <h1 className="text-4xl font-bold mb-20 text-center">
-        Four key questions answered by CleverBooks
+        Four key questions answered by Crest
       </h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4  gap-4">
         {questions.map((question, index) => (
